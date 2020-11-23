@@ -55,6 +55,8 @@
     border: 2px solid black;
     border-radius: 50px;
     background-color: hotpink;
+    text-decoration: none;
+    color: black;
 }
 .link:hover{
     cursor: pointer;
