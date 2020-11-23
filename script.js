@@ -1,13 +1,11 @@
-var radio = document.getElementById('radio');
-var feed = document.getElementById('feed');
-var radioplayer = document.getElementById('radioplayer');
+const radio = document.getElementById('rad');
+const menu = document.getElementById('menu');
+
 radio.addEventListener('click', function(){
-	if(feed.style.visibility == 'hidden'){
-		feed.style.visibility = 'visible';
-		radioplayer.style.visibility = 'hidden';
-}
-	else{
-		feed.style.visibility = 'hidden';
-		radioplayer.style.visibility = 'visible';
-	}
-					   })
+    if(menu.style.visibility == 'hidden') {
+        menu.style.visibility = 'visible';
+    }
+    else{
+        menu.style.visibility = 'hidden';
+    }
+})
