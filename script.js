@@ -1,16 +1,10 @@
-const names = ['tote', 'totey', 'toet'];
-const srcs = ['./images/tote.png','./images/tote.png','./images/tote.png'];;
+const names = ['tott', 'totey', 'toet', 'toee'];
+const srcs = ['./images/tote.png','./images/tote.png','./images/tote.png','./images/tote.png'];;
 class Item {
-    constructor(name, element, src){
+    constructor(name, element, text){
         this.name = name;
         this.element = element;
-        this.src = src;
-    }
-    name(x){
-        return names[x];
-    }
-    srcs(x){
-        return srcs[x];
+        this.text = text;
     }
 }
 var items = [];
@@ -18,6 +12,9 @@ var menu = document.getElementById('menu');
 function intializeImgs(){
     for(i=0; i<names.length; i++){
         items.push(new Item(names[i], document.createElement('img')));
+        items[i].text = document.createElement('p');
+        items[i].text.textContent = items[i].name;
+        console.log(items[i].name);
         items[i].element.setAttribute('src', srcs[i]);    
     }
 }
@@ -28,12 +25,14 @@ function addImgs(){
     }
 }
 function mouse(){
-    for(i=0; i<names.length; i++){
+    for(i=0; i<names.length-1; i++){
         items[i].element.onmouseover = function(){
-            console.log('dafdg');
+            console.log(i);
+            items[i].element.appendChild(items[i].text);
         }
     }
 }
 
 intializeImgs();
-addImgs();
+addImgs(); 
+mouse();
