@@ -1,36 +1,37 @@
 const names = ['tott', 'totey', 'toet', 'toee'];
 const srcs = ['./images/tote.png','./images/tote.png','./images/tote.png','./images/tote.png'];;
 class Item {
-    constructor(name, element, text){
+    constructor(name, img, a){
         this.name = name;
-        this.element = element;
-        this.text = text;
+        this.img = img;
+        this.a = a;
     }
 }
 var items = [];
 var menu = document.getElementById('menu');
 function intializeImgs(){
     for(i=0; i<names.length; i++){
-        items.push(new Item(names[i], document.createElement('img')));
-        items[i].text = document.createElement('p');
-        items[i].text.textContent = items[i].name;
-        console.log(items[i].name);
-        items[i].element.setAttribute('src', srcs[i]);    
+        items.push(new Item(names[i], document.createElement('img'), document.createElement('a')));
+        items[i].img.setAttribute('src', srcs[i]);
+        items[i].img.setAttribute('class', 'menuimg');
+                items[i].img.setAttribute('id', i);
+        items[i].a.setAttribute('class','menuitem');
+        items[i].a.textContent = items[i].name;   
     }
 }
 function addImgs(){
     for(i=names.length-1; i>=0; i--){
-        menu.appendChild(items[i].element);
-        items[i].element.setAttribute('class', 'menuitem');
+        menu.appendChild(items[i].a);
+        items[i].a.appendChild(items[i].img);
     }
 }
 function mouse(){
-    for(i=0; i<names.length-1; i++){
-        items[i].element.onmouseover = function(){
-            console.log(i);
-            items[i].element.appendChild(items[i].text);
+    $('.menuitem').hover(function(e){
+        if (e.target.className == 'menuitem'){
         }
-    }
+    }, function(e){
+
+    });
 }
 
 intializeImgs();

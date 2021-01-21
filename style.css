@@ -50,13 +50,22 @@
     flex-wrap: wrap;
 }
 .menuitem{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
     min-width: 230px;
     width: 19vw;
     max-width: 250px;
+    height: auto;
     margin: 4vw;
 }
 .menuitem:hover{
     cursor: pointer;
+}
+.menuitem p{
+    width: 100%;
+    z-index: 100;
 }
 #navbar{
     position: fixed;
