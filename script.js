@@ -32,8 +32,8 @@ function addImgs(){
 }
 function mouse(){
     $('.menuitem').hover(function(e){
-        items[parseInt(e.target.id) + "<br>"].a.style.visibility = 'none';
-        console.log(e.target.id);
+        console.log(this.firstChild);
+        this.firstChild.style.visibility = 'none';
     }, function(e){
 
     });
