@@ -34,12 +34,13 @@
     color: greenyellow;
     text-shadow: 2px 2px 20px greenyellow, 2px 2px 20px pink;
     font-size: 9.5vw;
+    transform: translateY(10px);
 }
 #menu{
     position: absolute;
     width: 70vw;
     height: auto;
-    top: 14vh;
+    top: 15vh;
     left: 0;
     right: 0;
     margin: auto;
@@ -58,12 +59,20 @@
     max-width: 250px;
     height: auto;
     margin: 4vw;
+    transition: all .15s;
 }
 .menuitem a{
-    line-height: 400px;
+    margin-top: 150px;
+    line-height: 50px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
     position: absolute;
-    display: block;
     text-align: center;
+    visibility: hidden;
+
+    max-width: 200px;
 }
 .menuimg{
     display: block;
@@ -71,18 +80,23 @@
 }
 .menuitem:hover{
     cursor: pointer;
+    box-shadow: 0px 2px 10px white;
+    transform: scale(1.05);
+    border-radius: 50px;
 }
 #navbar{
     position: fixed;
     bottom: 0;
     width: 100vw;
     height: 8vh;
-    display: flexbox;
+    display: flex;
     columns: 3;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .navitem{
+    text-decoration: none;
+    width: 25%;
     color: white;
     text-shadow: 2px 2px 2px grey;
     font-family: auth;
@@ -106,7 +120,7 @@
     right: 0;
     bottom: 0;
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 770px){
     #background video{
         width: 400vw;
     }
@@ -115,5 +129,11 @@
     }
     #logo:hover{
         font-size: 16.5vw;
+    }
+    .navitem{
+        font-size: 2em;
+    }
+    .navitem:hover{
+        font-size: 2.6em;
     }
 }

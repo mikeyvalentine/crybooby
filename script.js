@@ -1,5 +1,5 @@
-const names = ['tott', 'totey', 'toet', 'toee'];
-const srcs = ['./images/tote.png','./images/tote.png','./images/tote.png','./images/tote.png'];;
+const names = ['LA LA on cavnas', 'Goo goo heavy twill', 'hand sewn misty', 'fuck it heavyweight goo'];
+const srcs = ['./images/tote.png','./images/tote.png','./images/tote.png','./images/tote.png'];
 class Item {
     constructor(name, div, img, a){
         this.name = name;
@@ -33,9 +33,11 @@ function addImgs(){
 function mouse(){
     $('.menuitem').hover(function(e){
         console.log(this.firstChild);
-        this.firstChild.style.visibility = 'none';
+        this.firstChild.style.visibility = 'visible';
+        this.firstChild.style.opacity = '1';
     }, function(e){
-
+        this.firstChild.style.visibility = 'hidden';
+        this.firstChild.style.opacity = '0';
     });
 }
 
