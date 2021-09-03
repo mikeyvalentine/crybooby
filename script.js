@@ -1,5 +1,5 @@
-const names = ['LA LA on cavnas', 'Goo goo heavy twill', 'hand sewn misty', 'fuck it heavyweight goo'];
-const srcs = ['./images/tote.png','./images/tote.png','./images/tote.png','./images/tote.png'];
+const names = ['LA LA on cavnas', 'Goo goo heavy twill', 'hand sewn misty', 'July 2021 Cotton Button Up'];
+const srcs = ['./images/shirtfont.png','./images/shirtfont.png','./images/shirtfont.png','./images/shirtfont.png'];
 class Item {
     constructor(name, div, img, a){
         this.name = name;

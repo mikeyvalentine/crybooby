@@ -40,7 +40,7 @@
     position: absolute;
     width: 70vw;
     height: auto;
-    top: 15vh;
+    top: 18vh;
     left: 0;
     right: 0;
     margin: auto;
@@ -49,39 +49,37 @@
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 18vh;
 }
 .menuitem{
     display: flex;
     justify-content: center;
     vertical-align: middle;
-    min-width: 230px;
-    width: 19vw;
-    max-width: 250px;
     height: auto;
-    margin: 4vw;
-    transition: all .15s;
+    margin: 2vw;
+    transition: all .2s;
+    max-width: 400px;
 }
 .menuitem a{
-    margin-top: 150px;
+    margin-top: 120px;
     line-height: 50px;
     font-family: sans-serif;
+    text-shadow: 1px 1px 1px gainsboro, 1px 1px 10px white;
     color: #fff;
     font-size: 2em;
     font-weight: bold;
     position: absolute;
     text-align: center;
     visibility: hidden;
-
-    max-width: 200px;
 }
 .menuimg{
     display: block;
-    width: 100%;
+    width: 90%;
 }
 .menuitem:hover{
     cursor: pointer;
-    box-shadow: 0px 2px 10px white;
-    transform: scale(1.05);
+    box-shadow: 0px 2px 50px white, inset 0 0 50px white;
+    transform: scale(1.1);
     border-radius: 50px;
 }
 #navbar{
