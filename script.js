@@ -1,5 +1,6 @@
 const names = ['LA LA on cavnas', 'Goo goo heavy twill', 'hand sewn misty', 'July 2021 Cotton Button Up'];
 const srcs = ['./images/shirtfont.png','./images/shirtfont.png','./images/shirtfont.png','./images/shirtfont.png'];
+const refs = ['shirt.html', 'shirt.html', 'shirt.html', 'shirt.html'];
 class Item {
     constructor(name, div, img, a){
         this.name = name;
@@ -20,6 +21,7 @@ function intializeImgs(){
         items[i].img.setAttribute('src', srcs[i]);
         items[i].div.setAttribute('id', i);
         items[i].a.setAttribute('id', i);
+        items[i].a.setAttribute('href', refs[i]);
         items[i].a.textContent = items[i].name;   
     }
 }
